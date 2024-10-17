@@ -14,9 +14,14 @@ class SeriesController extends Controller
         $series = [
             'The 100',
             'The Walking Dead',
-            'Breaking Bead'
+            'Breaking Bead',
+            'Grey\'s Anatomy',
         ];
         return view('series.index')-> with('series', $series);
 
+    }
+    public function create()
+    {
+        return view('series.create');
     }
 }
