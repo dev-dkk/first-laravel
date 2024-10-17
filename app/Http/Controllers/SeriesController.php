@@ -16,7 +16,7 @@ class SeriesController extends Controller
             'The Walking Dead',
             'Breaking Bead'
         ];
-        return view('listar-series', compact('series'));
+        return view('series.index', compact('series'));
 
     }
 
