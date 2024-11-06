@@ -26,4 +26,9 @@ class SeriesController extends Controller
     {
         return view('series.create');
     }
+    public function destroy(Request $request)
+    {
+        Serie::destroy($request->series);
+        return to_route('series.index');
+    }
 }
