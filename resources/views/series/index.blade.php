@@ -18,7 +18,7 @@
                 @csrf
                 @method('DELETE')
                 <button class="btn btn-danger btn-sm">
-                    X
+                    Excluir
                 </button>
                 </form>
             </li>
