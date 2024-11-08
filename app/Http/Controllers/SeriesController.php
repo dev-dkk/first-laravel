@@ -14,7 +14,7 @@ class SeriesController extends Controller
      */
     public function index()
     {
-        $series = Serie::query()->orderBy('nome') -> get();
+        $series = Serie::all();
         $mensagemAdicionar = session('mensagem.sucesso');
         $mensagemExcluir = session('mensagem.excluir');
         return view('series.index')-> with('series', $series)-> with('mensagemAdicionar', $mensagemAdicionar)-> with('mensagemExcluir', $mensagemExcluir);
@@ -36,6 +36,7 @@ class SeriesController extends Controller
     }
     public function edit(Serie $series)
     {
+        dd($series->temporadas);
         return view('series.edit')->with('serie',$series);
     }
     public function update(Serie $series, SeriesFormRequest $request)
